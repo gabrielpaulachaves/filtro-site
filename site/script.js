@@ -8,9 +8,19 @@ const branco = document.getElementsByClassName('branco')
 const corrida = document.getElementsByClassName('corrida')
 const casual = document.getElementsByClassName('casual')
 
-let filtro = [
-    {preto},
-    {branco},
-    {corrida},
-    {casual}
+let tenis = [
+    {nome:'corrida branco' ,cor:branco ,tipo:corrida},
+    {nome:'corrida preto' ,cor:preto ,tipo:corrida},
+    {nome:'casual branco' ,cor:branco ,tipo:casual},
+    {nome:'casual preto' ,cor:preto ,tipo:casual}
 ]
+
+fpreto.addEventListener('click', ()=>{
+    let ftenis = tenis.filter((p)=>{
+        return p.cor == preto
+    } )
+})
+
+
+
+
