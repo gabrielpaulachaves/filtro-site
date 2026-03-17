@@ -1,30 +1,25 @@
 @charset "UTF-8";
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-
 header{
     background-color: beige;
     height: 200px;
 }
-main{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 30px;
-}
 .cartoes{
-      margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    gap: 30px;
+    gap: 50px;
+    background-color: black;
 }
 footer{
     margin-top: 10px;
@@ -48,13 +43,14 @@ footer > p > a{
 }
 header > p{
     font-size: 12px;
+    margin-left: 10px;
 }
 header > h2{
-    padding: 10px;
+    padding: 5px;
 }
 .filtro{
     font-size: 20px;
-    margin: 10px;
+    margin-left: 10px;
     border: none;
     padding: 5px;
     border-radius: 10px;
@@ -66,11 +62,24 @@ header > h2{
     text-align: center;
 }
 .cartao{
-    background-color: rgb(143, 243, 250);
-    max-height: 400px;
-    max-width: 400px;
-    min-height: 360px;
-    min-width: 360px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 340px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+}
+.desc{
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: beige;
+    height: 100%;
 }
 
 
