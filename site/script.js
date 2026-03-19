@@ -1,30 +1,25 @@
-let conteiner = document.querySelectorAll('.cartoes')
 let filtro = document.querySelectorAll('.filtro')
 let cartao = [...document.querySelectorAll('.cartao')]
 
+filtro.forEach(filtros => filtros.addEventListener('change', aplicarfiltro))
+
 function aplicarfiltro(){
 
-    let cor = filtro[0].value
-    let tipo = filtro[1].value
+    let cor = filtro[0].value.toLowerCase()
+    let tipo = filtro[1].value.toLowerCase()
 
-    const listafiltrada = cartao.filter(f => {
-        const info = cartao.getAttibute('data-name').ToLowerCase()
+    let filtrados = cartao.filter(cartoes => {
+        let nome = cartoes.dataset.name;
+        return nome.includes(cor) && nome.includes(tipo)
+    });
 
-        const corsel = cor === '' || info.includes(cor)
-        const tiposel = tipo === '' || info.includes(tipo)
-
-        return corsel && tiposel
+    tela(filtrados)
+}
+function tela(lista){
+    cartao.forEach(cartoes =>{
+        cartoes.style.display = 'none'
     })
-    conteiner.innerHTML = ""
-    listafiltrada.forEach(cadabloco => {
-        conteiner.appendChild(cartao)
+    lista.forEach(cartoes =>{
+        cartoes.style.display = 'flex'
     })
 }
-
-filtro.forEach(c => c.addEventListener('change', aplicarfiltro))
-
-
-
-
-
-
