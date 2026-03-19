@@ -1,5 +1,5 @@
-let conteiner = document.getElementById('cartoes')
-let filtro = [...document.querySelectorAll('.filtro')]
+let conteiner = document.querySelectorAll('.cartoes')
+let filtro = document.querySelectorAll('.filtro')
 let cartao = [...document.querySelectorAll('.cartao')]
 
 function aplicarfiltro(){
