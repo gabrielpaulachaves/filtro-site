@@ -3,67 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike</title>
+    <title>GenshinPedia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-       <h1 id="titulo">Tênis</h1> 
-       <p>Selecione seu tênis para suas necessidades</p>
-       <h2>Filtros</h2>
-        <select class="filtro">
+       <h1 id="titulo">Personagens de Genshin Impact</h1>        
+        <div id="filtros">
+           <h3>Elemento</h3> 
+            <select class="filtro" data-tipo="elemento">
+                <option value="todos">Todos</option>
+                <option value="cryo" style="color: rgb(122, 228, 255);">Cryo</option>
+                <option value="pyro" style="color: rgb(255, 68, 68);">Pyro</option>
+                <option value="electro" style="color: rgb(192, 37, 192);">Electro</option>
+                <option value="anemo" style="color: rgb(43, 233, 185) ;">Anemo</option>
+                <option value="dendro" style="color: rgb(7, 179, 7);">Dendro</option>
+                <option value="geo" style="color: rgb(172, 113, 4);">Geo</option>
+                <option value="hydro" style="color: rgb(26, 39, 161);">Hydro</option>
+            </select>
+            <h3>Raridade</h3>
+                   <select class="filtro" data-tipo="raridade">
             <option value="todos">Todos</option>
-            <option value="preto">Preto</option>
-            <option value="branco">Branco</option>
-        </select>
-       <select class="filtro">
-        <option value="todos">Todos</option>
-            <option value="corrida">Corrida</option>
-            <option value="casual">Casual</option>
-       </select>
+                <option value="cinco" style="color: gold;">5</option>
+                <option value="quatro" style="color: rgb(167, 142, 0);">4</option>
+                   </select>
+                   <h3>Região</h3>
+                   <select class="filtro" data-tipo="regiao">
+            <option value="todos">Todos</option>
+            <option value="mondstadt" style="color: gray;">Mondstadt</option>
+            <option value="liyue" style="color: gray;">Liyue</option>
+            <option value="inazuma" style="color: gray;">Inazuma</option>
+            <option value="sumeru" style="color: gray;">Sumeru</option>
+            <option value="fontaine" style="color: gray;">Fontaine</option>
+            <option value="natlan" style="color: gray;">Natlan</option>
+            <option value="nodkrai" style="color: gray;">Nodkrai</option>
+            <option value="snezhnaya" style="color: gray;">Snezhnaya</option>      
+                   </select>
+                   <h3>Arma</h3>
+                   <select class="filtro" data-tipo="arma">
+            <option value="todos">Todos</option>
+            <option value="espada">Espada</option>
+            <option value="claymore">Claymore</option>
+            <option value="arco">Arco</option>
+            <option value="catalisador">Catalisador</option>
+            <option value="lança">Lança</option>        
+                   </select>
+                   <h3>Sexo</h3>
+                   <select class="filtro" data-tipo="sexo">
+            <option value="todos">Todos</option>
+            <option value="masc" style="color: rgb(74, 74, 255);">Masculino</option>
+            <option value="fem" style="color: rgb(253, 105, 162);">Feminino</option>
+                   </select>
+        </div>
     </header>
     <main>
-        <div class="cartoes">
-            <div class="cartao" data-name="tenis corrida preto">
-                <img src="tpc1.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, </p></div>
-            </div>
-            <div class="cartao" data-name="tenis casual branco">
-                <img src="tcbb1.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat</p></div>
-            </div>
-            <div class="cartao" data-name="tenis corrida branco">
-                <img src="tbc1.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat</p></div>
-            </div>
-            <div class="cartao" data-name="tenis corrida preto">
-                <img src="tpc2.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat</p> </div>
-            </div>
-            <div class="cartao" data-name="tenis casual branco">
-                <img src="tcbb2.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat </p></div>
-            </div>
-            <div class="cartao" data-name="tenis casual preto">
-                <img src="tcpp1.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat </p></div>
-            </div>
-            <div class="cartao" data-name="tenis corrida branco">
-                <img src="tbc2.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid</p></div>
-            </div>
-            <div class="cartao" data-name="tenis casual preto">
-                <img src="tcpp2.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat </p></div>
-            </div>
-            <div class="cartao" data-name="tenis casual branco">
-                <img src="tcbb3.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat </p></div>
-            </div>
-            <div class="cartao" data-name="tenis corrida preto">
-                <img src="tpc3.jpg" alt="">
-                <div class="desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid, placeat </p></div>
-            </div>
+        <div class="personagens">
+
         </div>
     </main>
     <footer>
