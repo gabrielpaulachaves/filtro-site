@@ -34,3 +34,10 @@ option{
     font-weight: bold;
     text-align: center;
 }
+main{
+    max-width: 1200px;
+    width: 100%;
+    background-color: beige;
+    margin: auto;
+    margin-top: 10px;
+}
