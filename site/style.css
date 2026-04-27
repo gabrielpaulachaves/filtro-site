@@ -9,7 +9,7 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background-color: #0D1117;
+    background-color: #181e27;
 }
 header{
     display: flex;
@@ -56,10 +56,11 @@ option{
 main{
     max-width: 1200px;
     width: 100%;
-    background-color: beige;
     margin: auto;
     margin-top: 10px;  
-    background-color: #161B22;
+    background-color: #10141a;
+    box-shadow: 2px 2px 50px 2px rgba(0, 0, 0, 0.514);
+    border-radius: 15px;
 }
 #principal{
      display: grid;
