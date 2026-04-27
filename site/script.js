@@ -26,4 +26,6 @@ personagens.forEach(personagem => {
     p.textContent = nomecompleto
     personagem.querySelector(".complemento").append(p)
 })
+
+
  
