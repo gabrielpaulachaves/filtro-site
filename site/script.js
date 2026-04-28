@@ -89,8 +89,20 @@ personagens.forEach(personagem => {
     personagem.querySelector(".complemento").append(regiao)
 })
 
-filtros.forEach(addEventListener("change", (f)=>{
-    console.log(f)
 
+filtros.forEach(filtro => filtro.addEventListener("change", (f)=>{
+    const filtrovalor = [filtro.value]
+        f.target.style.color = f.target.selectedOptions[0].style.color
+        personagens.forEach(personagem => {
+            const valores = personagem.dataset.filter 
+            if(f.target.value == "todos"){
+                personagem.style.display = "block"
+            }else{
+                if(valores.includes(filtrovalor)){
+              personagem.style.display = "block"
+            }else
+               personagem.style.display = "none" 
+            }
+        })
 }))
  
