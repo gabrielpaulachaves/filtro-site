@@ -90,14 +90,7 @@ personagens.forEach(personagem => {
 })
 
 filtros.forEach(addEventListener("change", (f)=>{
-    console.log(f.target.value)
-   /* if(f.target.option[0]){
-        f.target.style.color = "none"
-    }else if(f.target.option[1]){
-        f.target.style.color = f.target.option[1].style.color
-    }
-    */
-
+    console.log(f)
 
 }))
  
