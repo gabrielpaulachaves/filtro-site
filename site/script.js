@@ -89,24 +89,27 @@ personagens.forEach(personagem => {
     personagem.querySelector(".complemento").append(regiao)
 })
 
+const filtrovalor = {
+    elemento: "todos",
+    raridade: "todos",
+    regiao: "todos",
+    arma: "todos",
+    sexo: "todos"
+}
 
 filtros.forEach(filtro => filtro.addEventListener("change", (f)=>{
-    const filtrovalor = [filtro.value]
-   // filtrovalor.push()
-    console.log(filtrovalor)
         f.target.style.color = f.target.selectedOptions[0].style.color
 
+                    //a propriedade do objeto deve ter o mesmo nome do dataset
+        filtrovalor[f.target.dataset.tipo] = f.target.value
+
         personagens.forEach(personagem => {
-            const valores = personagem.dataset.filter
-            if(f.target.value == "todos"){
-                personagem.style.display = "block"
-            }else{
-                if(valores.includes(filtrovalor)){
+            const valores = personagem.dataset.filter 
+                if((filtrovalor.elemento == "todos" || valores.includes(filtrovalor.elemento)) && (filtrovalor.raridade == "todos" || valores.includes(filtrovalor.raridade)) && (filtrovalor.regiao == "todos" || valores.includes(filtrovalor.regiao)) && (filtrovalor.arma == "todos" || valores.includes(filtrovalor.arma)) && (filtrovalor.sexo == "todos" || valores.includes(filtrovalor.sexo))){
               personagem.style.display = "block"
-            }else
-               personagem.style.display = "none" 
-            }
-        
+            }else{
+                personagem.style.display = "none" 
+            }                
         })
 }))
  
