@@ -105,9 +105,10 @@ filtros.forEach(filtro => filtro.addEventListener("change", (f)=>{
 
         personagens.forEach(personagem => {
             const valores = personagem.dataset.filter 
-                if((filtrovalor.elemento == "todos" || valores.includes(filtrovalor.elemento)) && (filtrovalor.raridade == "todos" || valores.includes(filtrovalor.raridade)) && (filtrovalor.regiao == "todos" || valores.includes(filtrovalor.regiao)) && (filtrovalor.arma == "todos" || valores.includes(filtrovalor.arma)) && (filtrovalor.sexo == "todos" || valores.includes(filtrovalor.sexo))){
+            const valoresfiltro = Object.values(filtrovalor)
+                if(valoresfiltro.every(valor => valores.includes(valor) || valor == "todos")){
               personagem.style.display = "block"
-            }else{
+            }else{ 
                 personagem.style.display = "none" 
             }                
         })
