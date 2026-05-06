@@ -60,7 +60,7 @@ personagens.forEach(personagem => {
     }else if(personagem.dataset.filter.includes("catalisador")){
         arma.src = "imagens-filtros/catalisador.png"
     }else{
-        arma.src = "imagens-filtros/Lanca.png"
+        arma.src = "imagens-filtros/lanca.png"
     }
     personagem.querySelector(".complemento").append(arma)
 })
